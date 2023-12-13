@@ -20,7 +20,7 @@ public class DebtCardTest {
     }
 
     @BeforeEach
-    void setUp() {
+    void beforeEach() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
@@ -30,7 +30,7 @@ public class DebtCardTest {
     }
 
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
         driver.quit();
         driver = null;
     }
